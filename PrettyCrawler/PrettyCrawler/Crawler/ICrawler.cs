@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace PrettyCrawler.Crawler
 {
     public interface ICrawler
     {
-        IEnumerable<string> Crawl(Uri rootUri, Uri targetUri);
+        Task<IEnumerable<string>> CrawlAsync(string rootUrl);
     }
 }
